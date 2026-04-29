@@ -13,15 +13,10 @@ const forwardDelete = (el) => {
   if (!selection?.rangeCount) return
   if (!selection.anchorNode || !el.contains(selection.anchorNode)) return
 
-  // isCollapsed is true when there is no selection and only a caret is present.
-  if (selection.isCollapsed) {
-    selection.modify("extend", "forward", "character")
-  }
-
-  // modify() can change isCollapsed from true to false.
-  if (!selection.isCollapsed) {
-    selection.deleteFromDocument()
-  }
+  // execCommand() is deprecated, but Chrome still routes editing commands through
+  // the editor/undo pipeline more reliably than direct Selection DOM deletion.
+  const command = selection.isCollapsed ? "forwardDelete" : "delete"
+  document.execCommand(command)
 }
 
 const onKeydown = (event) => {
