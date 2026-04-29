@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Ctrl+D Forward Delete for ChatGPT",
+  "version": "0.1.1",
+  "description": "Keep Ctrl+D as forward delete in the ChatGPT prompt editor.",
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
