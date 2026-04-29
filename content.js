@@ -3,7 +3,9 @@
 // only plain Ctrl+D while the prompt editor is focused.
 // Keep prompt editor detection isolated because ChatGPT's DOM can change.
 
-const isPromptEditor = (el) => el instanceof HTMLElement && el.id === "prompt-textarea"
+const PROMPT_TEXTAREA_ID = "prompt-textarea"
+
+const isPromptEditor = (el) => el instanceof HTMLElement && el.id === PROMPT_TEXTAREA_ID
 
 const isPlainCtrlD = (event) =>
   event.ctrlKey && !event.metaKey && !event.altKey && !event.shiftKey && event.key.toLowerCase() === "d"
