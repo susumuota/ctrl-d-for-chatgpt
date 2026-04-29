@@ -11,6 +11,7 @@ This repository contains Ctrl+D Forward Delete for ChatGPT, a small Chrome exten
 
 ## Development Notes
 
+- Target Chrome version is Chrome 147 or later.
 - Keep the extension dependency-free unless there is a clear reason to add tooling.
 - Prefer plain JavaScript that can run directly as a Chrome content script.
 - Keep permissions and match patterns as narrow as possible.
