@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
   "name": "Ctrl+D Forward Delete for ChatGPT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Keep Ctrl+D as forward delete in the ChatGPT prompt editor.",
+  "minimum_chrome_version": "147",
   "content_scripts": [
     {
       "matches": ["https://chatgpt.com/*"],

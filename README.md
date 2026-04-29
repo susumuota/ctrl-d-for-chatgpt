@@ -39,7 +39,7 @@ The extension only intercepts plain `Ctrl+D` in the prompt editor. Other ChatGPT
 
 This extension is intentionally dependency-free. The content script is plain JavaScript and is loaded directly by Chrome.
 
-Target Chrome version: Chrome 147.0.7727.116 or later.
+Target Chrome version: Chrome 147 or later.
 
 Run basic validation with:
 
